@@ -6,6 +6,7 @@
  int main {
      
   cout << "Witajcie ziemianie jestesmy z planety kosmitow przybylismy podbic ziemie"
-
+ cout << "zginiecie"
+   
    
  }

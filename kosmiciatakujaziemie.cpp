@@ -11,36 +11,36 @@ using namespace std;
 const long double C = 299792458;
 
 #pragma region teksty
-string tekst = "Witaj Kosmito, zaplanujmy razem inwazje.\n";
-string tekst2 = "Uwaga! To od twoich decyzji zalezy sukces lub katastrofa inwazji. Twoim celem jest zajecie planety Ziemi!\n Dokonasz tego na podstawie swoich wyborow\n";
-string tekst3 = "Wybieraj madrze. POWODZENIA!!!\n\n";
-string tekst4 = "Podaj planete z Ukladu Slonecznego z ktorej pochodzisz: ";
-string tekst5 = "Kosmito, nie znasz nazwy swojej planety, prosze sprawdz pisownie";
-string tekst6 = "Wybrana przez Ciebie planeta to MARS!\n\n Jego atmosfera sklada sie glownie z dwutlenku wegla i malych ilosci azotu i argonu\n Na powierzchni wystepuja takie mineraly jak: zelazo, krzemionka i tytan\n\n";
-string tekst8 = "Wybrana przez Ciebie planeta to MERKURY!\n\n Jest to niewielka i goraca planeta, polozona najblizej Slonca\n charakteryzuje sie brakiem atmosfery.\n Powierzchnia sklada sie glownie z metali i krzemianow (np. oliwinu, zelaza, rteci, krzemu, niklu)\n\n";
-string tekst9 = "Wybrana przez Ciebie planeta to WENUS!\n\n To skalista planeta z bardzo gesta atmosfera, ktora sklada sie az z 96,5% dwutlenku wegla oraz sladowych ilosci helu, neonu oraz kwasu siarkowego\n W sklad powierzchni wchodza m.in.: pirop, granat, oliwin i plagioklazy\n";
-string tekst10= "Wybrana przez Ciebie planeta to JOWISZ!\n To najwieksza planeta w Ukladzie Slonecznym.\n Jego atmosfera sklada sie z roznorodnych gazow, w tym wodoru, helu, amoniaku i metanu.";
-string tekst11;
-string infobrak = "Przepraszamy, taka planeta nie istnieje!\n\n SPROBUJ PONOWNIE\n";
-string infozakonczenie = "FAZA PIERWSZA: Z A K O N C Z O N A\n\n Gratulujemy wybrania planety. Jestes krok blizej od podbicia Ziemi.\n\n ";
-string nazwastatku = "Teraz nadszedl czas na nazwanie twojego statku kosmicznego: ";
-string tekst7 = "Wybierz z jakiego surowca zrobione jest paliwo w twoim statku kosmicznym: \n";
-string infopaliwo1 = "Zrobienie paliwa z: ";
-string infopaliwo2 = " jest niemozlwie.\n SPROBUJ PONOWNIE!";
-string infopaliwo3 = " jest mozliwe!\n";
-string pytanieczas = "Podaj czas w godzinach, w jakim chcez przeleciec odleglosc ze swojej planety na planete Ziemie.";
-string predkoscstatku = "Predkosc twojego statku powinna wynosic: ";
-string npwdpaliwo = "Substancja, z ktorej zostalo zrobione paliwo okazuje sie za slaba!!\n Konczy ci sie w polowie drogi!!!. \n\n";
-string faza2 = "FAZA DRUGA: Z A K O N C Z O N A \n";
-string przegrana = " KOSMITO! P R Z E G R A L E S! INWAZJA ZAKONCZONA K A T A S T R O F A\n ";
-string wygranafazy2 = "GRATULACJE!! Dobrales odpowiednie paliwo. Umozliwia Ci to, prowadzenie inwazji do konca!\n";
+string wstepPowitanie = "Witaj Kosmito, zaplanujmy razem inwazje.\n";
+string wstepCel = "Uwaga! To od twoich decyzji zalezy sukces lub katastrofa inwazji. Twoim celem jest zajecie planety Ziemi!\nDokonasz tego na podstawie swoich wyborow\n";
+string wstepPowodzenia = "Wybieraj madrze. POWODZENIA!!!\n\n";
+
+string wprowadzPlanete = "Podaj planete z Ukladu Slonecznego z ktorej pochodzisz: ";
+string wprowadzPlaneteBlad = "Przepraszamy, taka planeta nie istnieje!\n\nSPROBUJ PONOWNIE\n";
+
+string wprowadzNazwaStatku = "Teraz nadszedl czas na nazwanie twojego statku kosmicznego: ";
+string wprowadzPaliwo = "Wybierz z jakiego surowca zrobione jest paliwo w twoim statku kosmicznym: ";
+string wprowadzCzas = "Podaj czas w godzinach, w jakim chcez przeleciec odleglosc ze swojej planety na planete Ziemie.";
+
+string infoPaliwo1 = "Zrobienie paliwa z: ";
+string infoPaliwo2 = "jest niemozlwie.\nSPROBUJ PONOWNIE!";
+string infoPaliwo3 = "jest mozliwe!\n";
 string infopaliwo4 = "Paliwo zrobione z tego surowca umozliwia Ci dotarcie na Ziemie i powrot do domu\n";
-string info = "Taki surowiec nie istnieje na twojej planecie lub nie da zrobic sie z niego paliwa.\n SPROBUJ PONOWNIE!\n";
-string sprawdzaniepredkosci1 = "Twoj statek kosmiczny jest szybszy niz swiatlo!\n Juz dawno wyleciales z galektyki.\n Bardzo nam przykro, minales sie z Ziemia";
-string sprawdzaniepredkosci2 = "Twoj statek kosmiczny jest tak samo szybki jak swiatlo! Lecisz z predkoscia swiatla i to doslownie!\n";
-string sprawdzaniepredkosci3 = "Z przykroscia stwierdzamy, ze twoj lot byl na tyle powolny,\n ze Ziemianie zdazyli Cie zlokalizowac.\n\n I unicestwic... ";
-string sprawdzaniepredkosci4 = "Doleciales na plenate Ziemie! Na twoje szczescie Ziemianie nie zdazyli Cie zauwazyc! \n";
-string wygrana = "\nGRATULUJEMY! INWAZJA ZAKONCZYLA SIE S U K C E S E M!\n\n TWOJA PLANETA PRZEJELA ZIEMIE!\n\n W Y G R A L E S";
+string paliwoNieprawidlowe = "Substancja, z ktorej zostalo zrobione paliwo okazuje sie za slaba!!\nKonczy ci sie w polowie drogi!!!.\n\n";
+string paliwoBrakSurowca = "Taki surowiec nie istnieje na twojej planecie lub nie da zrobic sie z niego paliwa.\nSPROBUJ PONOWNIE!\n";
+
+string sprawdzaniePredkosci1 = "Twoj statek kosmiczny jest szybszy niz swiatlo!\nJuz dawno wyleciales z galektyki.\nBardzo nam przykro, minales sie z Ziemia";
+string sprawdzaniePredkosci2 = "Twoj statek kosmiczny jest tak samo szybki jak swiatlo! Lecisz z predkoscia swiatla i to doslownie!\n";
+string sprawdzaniePredkosci3 = "Z przykroscia stwierdzamy, ze twoj lot byl na tyle powolny,\nze Ziemianie zdazyli Cie zlokalizowac.\n\nI unicestwic... ";
+string sprawdzaniePredkosci4 = "Doleciales na plenate Ziemie! Na twoje szczescie Ziemianie nie zdazyli Cie zauwazyc!\n";
+string predkoscsStatku = "Predkosc twojego statku powinna wynosic: ";
+
+string fazaPierwszaZakonczenie = "FAZA PIERWSZA: Z A K O N C Z O N A\n\nGratulujemy wybrania planety. Jestes krok blizej od podbicia Ziemi.\n\n ";
+string fazaDrugaZakonczenie = "FAZA DRUGA: Z A K O N C Z O N A \n";
+string fazaDrugaZakonczenieWygrana = "GRATULACJE!! Dobrales odpowiednie paliwo. Umozliwia Ci to, prowadzenie inwazji do konca!\n";
+
+string przegrana = "KOSMITO! P R Z E G R A L E S! INWAZJA ZAKONCZONA K A T A S T R O F A\n";
+string wygrana = "\nGRATULUJEMY! INWAZJA ZAKONCZYLA SIE S U K C E S E M!\n\nTWOJA PLANETA PRZEJELA ZIEMIE!\n\nW Y G R A L E S";
 #pragma endregion
 
 struct GatunekKosmitow {
@@ -84,10 +84,10 @@ GatunekKosmitow informacje;
 //funkcje pomocnicze
 void LiterkaPoLiterce(string tekst) {
     for (size_t i = 0; i<tekst.length(); i++) {
-        std::cout << tekst[i];
+        cout << tekst[i];
         Sleep(5);
     }
-    std::cout << endl;
+    cout << endl;
 }
 long double ObliczeniePredkosc(long double l, long double c, long double t) { //obliczanie predkosc z jaka pojazd moze sie poruszac zeby w x czasu dotarł do planety
     return (l * c) * sqrtl(pow(l, 2) + (powl(c, 2) * powl(t, 2))) / (powl(l, 2) + (powl(c, 2) * powl(t, 2)));
@@ -197,20 +197,20 @@ int main()
 //definicje funkcji
 void WprowadzDaneOPlanecie()
 {
-    LiterkaPoLiterce(tekst);
-    LiterkaPoLiterce(tekst2);
-    LiterkaPoLiterce(tekst3);
-    LiterkaPoLiterce(tekst4);
+    LiterkaPoLiterce(wstepPowitanie);
+    LiterkaPoLiterce(wstepCel);
+    LiterkaPoLiterce(wstepPowodzenia);
+    LiterkaPoLiterce(wprowadzPlanete);
 
     while(true)
     {
-        std::cin >> informacje.planeta;
-        std::transform(informacje.planeta.begin(), informacje.planeta.end(), informacje.planeta.begin(), [](unsigned char c){ return std::tolower(c); }); //zamiana stringa na male litery
+        cin >> informacje.planeta;
+        transform(informacje.planeta.begin(), informacje.planeta.end(), informacje.planeta.begin(), [](unsigned char c){ return tolower(c); }); //zamiana stringa na male litery
 
         if(PlanetyUkladuSlonecznego.find(informacje.planeta) == PlanetyUkladuSlonecznego.end())
         {
             //nie znaleziono planety
-            LiterkaPoLiterce(infobrak);
+            LiterkaPoLiterce(wprowadzPlaneteBlad);
         }
         else
         {
@@ -221,82 +221,90 @@ void WprowadzDaneOPlanecie()
         }
     }
     
-    LiterkaPoLiterce(infozakonczenie);
+    LiterkaPoLiterce(fazaPierwszaZakonczenie);
 }
 
 void WprowadzDaneOStatku()
 {
-    LiterkaPoLiterce(nazwastatku);
-    std::cin >> informacje.nazwaStatku;
-    std::cout << "\n";
+    LiterkaPoLiterce(wprowadzNazwaStatku);
+    cin >> informacje.nazwaStatku;
+    cout << "\n";
 }
 
 void WprowadzenieObliczaniePaliwa()
 {
-    long double t; // czas
-    long double V; //predkosc
+    long double t = 0; // czas
+    long double V = 0; //predkosc
     
-    LiterkaPoLiterce(tekst7);
+    LiterkaPoLiterce(wprowadzPaliwo);
     
-    std::cin >> informacje.rodzajPaliwa;
-    std::transform(informacje.rodzajPaliwa.begin(), informacje.rodzajPaliwa.end(), informacje.rodzajPaliwa.begin(), [](unsigned char c){ return std::tolower(c); }); //zamiana stringa na male litery
+    cin >> informacje.rodzajPaliwa;
+    transform(informacje.rodzajPaliwa.begin(), informacje.rodzajPaliwa.end(), informacje.rodzajPaliwa.begin(), [](unsigned char c){ return tolower(c); }); //zamiana stringa na male litery
 
     if(informacje.rodzajPaliwa == WybranaPlaneta.paliwoMocne[0] || informacje.rodzajPaliwa == WybranaPlaneta.paliwoMocne[1])
     {
         //wygrana
-        LiterkaPoLiterce(wygranafazy2);
+        LiterkaPoLiterce(fazaDrugaZakonczenieWygrana);
         LiterkaPoLiterce(infopaliwo4);
 
-        LiterkaPoLiterce(faza2);
+        LiterkaPoLiterce(fazaDrugaZakonczenie);
 
-        LiterkaPoLiterce(pytanieczas);
-        std::cin >> t;
+        LiterkaPoLiterce(wprowadzCzas);
+
+        while (t == 0){
+            cin >> t;
+        }
+
         t = t * 3600;
 
-        std::cout << "\n";
-        LiterkaPoLiterce(predkoscstatku);
+        cout << "\n";
+        LiterkaPoLiterce(predkoscsStatku);
         
         V = ObliczeniePredkosc(WybranaPlaneta.l, C, t);
-        std::cout << V << "m/s\n\n";
+        cout << V << "m/s\n\n";
         
         if (V > C) {
-            LiterkaPoLiterce(sprawdzaniepredkosci1);
+            LiterkaPoLiterce(sprawdzaniePredkosci1);
             Przegrana();
 
         }
         else if (V == C) {
-            LiterkaPoLiterce(sprawdzaniepredkosci2);
+            LiterkaPoLiterce(sprawdzaniePredkosci2);
             LiterkaPoLiterce(wygrana);
 
         }
         else if (V < 400000) {
-            LiterkaPoLiterce(sprawdzaniepredkosci3);
+            LiterkaPoLiterce(sprawdzaniePredkosci3);
             Przegrana();
 
         }
         else if (V > 400000 && V < C)
-            LiterkaPoLiterce(sprawdzaniepredkosci4);
+            LiterkaPoLiterce(sprawdzaniePredkosci4);
         LiterkaPoLiterce(wygrana);
     }
     else if(informacje.rodzajPaliwa == WybranaPlaneta.paliwoSlabe[0] || informacje.rodzajPaliwa == WybranaPlaneta.paliwoSlabe[1])
     {
-        LiterkaPoLiterce(infopaliwo1);
-        std::cout << informacje.rodzajPaliwa;
-        LiterkaPoLiterce(infopaliwo3);
+        LiterkaPoLiterce(infoPaliwo1);
+        cout << informacje.rodzajPaliwa << endl;
+        LiterkaPoLiterce(infoPaliwo3);
 
         //  przechodzimy do wylczenia predkosci
-        LiterkaPoLiterce(pytanieczas);
-        std::cin >> t;
+        LiterkaPoLiterce(wprowadzCzas);
+        
+        while (t == 0){
+            cin >> t;
+        }
+        
         t = t * 3600;
 
-        std::cout << "\n";
-        LiterkaPoLiterce(predkoscstatku);
+        cout << "\n";
+        LiterkaPoLiterce(predkoscsStatku);
         
         V = ObliczeniePredkosc(WybranaPlaneta.l, C, t);
         
-        std::cout << V << "m/s\n\n";
+        cout << V << "m/s\n\n";
 
-        LiterkaPoLiterce(npwdpaliwo);
+        LiterkaPoLiterce(paliwoNieprawidlowe);
         Przegrana();
 
     }
@@ -325,13 +333,13 @@ void WprowadzenieObliczaniePaliwa()
 
         if(czySubstancjaIstnieje ==true)
         {
-            LiterkaPoLiterce(infopaliwo1);
-            std::cout << informacje.rodzajPaliwa;
-            LiterkaPoLiterce(infopaliwo2);
+            LiterkaPoLiterce(infoPaliwo1);
+            cout << informacje.rodzajPaliwa;
+            LiterkaPoLiterce(infoPaliwo2);
         }
         else
         {
-            LiterkaPoLiterce(info);
+            LiterkaPoLiterce(paliwoBrakSurowca);
         }
 
         WprowadzenieObliczaniePaliwa();
